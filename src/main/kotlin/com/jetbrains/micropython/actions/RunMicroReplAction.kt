@@ -23,8 +23,14 @@ import com.jetbrains.micropython.settings.MicroPythonFacet
  */
 class RunMicroReplAction : MicroPythonCommandAction() {
   override fun getCommand(facet: MicroPythonFacet): List<String>? {
+
     val pythonPath = facet.pythonPath ?: return null
     val devicePath = facet.devicePath ?: return null
-    return listOf(pythonPath, "${MicroPythonFacet.scriptsPath}/microrepl.py", devicePath)
+    val moduleName = facet.getModule().getName()
+
+    if (moduleName == "esp32")
+      return listOf(pythonPath, "${MicroPythonFacet.scriptsPath}/esp32repl.py", devicePath)
+    else
+      return listOf(pythonPath, "${MicroPythonFacet.scriptsPath}/microrepl.py", devicePath)
   }
 }

@@ -10,6 +10,7 @@ The Python code development plugin for [MicroPython](http://micropython.org/) de
 
 The plugin supports these devices:
 
+* [ESP32](https://github.com/)
 * [BBC Micro:bit](https://github.com/vlasovskikh/intellij-micropython/wiki/BBC-Micro%3Abit)
 * [ESP8266](https://github.com/vlasovskikh/intellij-micropython/wiki/ESP8266)
 * [PyBoard](https://github.com/vlasovskikh/intellij-micropython/wiki/Pyboard)

@@ -2,6 +2,10 @@
   <name>MicroPython</name>
   <id>intellij-micropython</id>
   <change-notes><![CDATA[
+      <p>Microduino:</p>
+      <ul>
+        <li>Add esp32 to device list</li>
+      </ul>
       <p>1.0.6:</p>
       <ul>
         <li>Fixed several bugs in <code>machine</code> stub</li>
@@ -45,7 +49,7 @@
       <p>Support for MicroPython devices in IntelliJ IDEA and PyCharm.</p>
       <p>Features:</p>
       <ul>
-        <li>Code completion and docs for some ESP8266, Pyboard, and MicroPython modules</li>
+        <li>Code completion and docs for some ESP32, ESP8266, Pyboard, and MicroPython modules</li>
         <li>Flash a Python file or directory to a device</li>
         <li>Run REPL on a device</li>
       </ul>
@@ -83,8 +87,9 @@
   </extensions>
 
   <extensions defaultExtensionNs="com.jetbrains.micropython">
-    <deviceProvider implementation="com.jetbrains.micropython.devices.MicroBitDeviceProvider"/>
     <deviceProvider implementation="com.jetbrains.micropython.devices.Esp8266DeviceProvider"/>
+    <deviceProvider implementation="com.jetbrains.micropython.devices.Esp32DeviceProvider"/>
+    <deviceProvider implementation="com.jetbrains.micropython.devices.MicroBitDeviceProvider"/>
     <deviceProvider implementation="com.jetbrains.micropython.devices.PyboardDeviceProvider"/>
   </extensions>
 
